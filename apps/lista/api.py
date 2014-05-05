@@ -31,6 +31,6 @@ class TeacherResource(MyModelResource):
         queryset = Teacher.objects.all()
         resource_name = 'teacher'
         #fields = ['name', 'surname', 'degree', 'faculty']
-        #excludes = ['resource_uri', 'id']
+        excludes = ['id']
         include_resource_uri = False
         limit = 250
