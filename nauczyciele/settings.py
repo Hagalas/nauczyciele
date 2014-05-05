@@ -125,6 +125,8 @@ INSTALLED_APPS = (
     'lista',
     'downloader',
     'tastypie',
+    'lxml',
+    'defusedxml',
 )
 
 SESSION_SERIALIZER = 'django.contrib.sessions.serializers.JSONSerializer'

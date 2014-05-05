@@ -1,6 +1,7 @@
 from django.http import HttpResponse
 from tastypie.resources import ModelResource
 from tastypie import resources
+from tastypie.constants import ALL
 from lista.models import Teacher
 
 
@@ -31,6 +32,7 @@ class TeacherResource(MyModelResource):
         queryset = Teacher.objects.all()
         resource_name = 'teacher'
         #fields = ['name', 'surname', 'degree', 'faculty']
-        excludes = ['id']
-        include_resource_uri = False
+        #excludes = ['id']
+        include_resource_uri = True
         limit = 250
+        filtering = {"name" : ALL, "surname" : ALL, "degree" : ALL, "faculty" : ALL}
